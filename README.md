@@ -1,4 +1,4 @@
-#Bingo Generator
+# Bingo Generator
 
 Have you ever wanted to generate your own Bingo boards?  
 Were there ever meetings boring enough for you to notice certain patterns in how participants behave?  
