@@ -22,7 +22,7 @@ The generator will then output a valid latex file which compiles to a document c
 ### Advanced Example
 Of course, for most of these events, a single Bingo board might not suffice (especially if you want to play with friends).  
 We provide a few command line options for a more customized experience.  
-Consider this example:
+Consider this example:  
 ``>python bingo_generator.py 5 -b board_template.tex -d document_template.tex < bingo_values.txt > bingo.tex``
 
 Here we specifiy three options. The first, positional argument is ``n``, the number of boards to be generated.
