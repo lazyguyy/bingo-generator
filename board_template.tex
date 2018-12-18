@@ -1,0 +1,42 @@
+{
+\newcommand{\thiswidth}{\textwidth}
+\newcommand{\grid}{0.2\thiswidth}
+\newcommand{\nodesize}{0.18\thiswidth}
+\newcommand{\offset}{0.1\thiswidth}
+\newcommand{\wraptext}[1]{\begin{varwidth}{\nodesize}\begin{center}\Large#1\end{center}\end{varwidth}}
+\begin{tikzpicture}
+    \tikzstyle{invis} = [rectangle, minimum size=\grid]
+    \node[invis] at (\offset, \offset) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset, \offset + \grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset, \offset + 2*\grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset, \offset + 3*\grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset, \offset + 4*\grid) {\wraptext{#INSERT_HERE#}};
+
+    \node[invis] at (\offset + \grid, \offset) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + \grid, \offset + \grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + \grid, \offset + 2*\grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + \grid, \offset + 3*\grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + \grid, \offset + 4*\grid) {\wraptext{#INSERT_HERE#}};
+
+    \node[invis] at (\offset + 2*\grid, \offset) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 2*\grid, \offset + \grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 2*\grid, \offset + 2*\grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 2*\grid, \offset + 3*\grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 2*\grid, \offset + 4*\grid) {\wraptext{#INSERT_HERE#}};
+
+    \node[invis] at (\offset + 3*\grid, \offset) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 3*\grid, \offset + \grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 3*\grid, \offset + 2*\grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 3*\grid, \offset + 3*\grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 3*\grid, \offset + 4*\grid) {\wraptext{#INSERT_HERE#}};
+
+    \node[invis] at (\offset + 4*\grid, \offset) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 4*\grid, \offset + \grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 4*\grid, \offset + 2*\grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 4*\grid, \offset + 3*\grid) {\wraptext{#INSERT_HERE#}};
+    \node[invis] at (\offset + 4*\grid, \offset + 4*\grid) {\wraptext{#INSERT_HERE#}};
+
+
+    \draw[step=\grid] (0, 0) grid (\thiswidth, \thiswidth);
+\end{tikzpicture}
+}
