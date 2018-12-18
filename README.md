@@ -6,7 +6,7 @@ Now you may generate your own Bingo boards to pass the time with something fun a
 
 ## Usage
 
-To use the generator you must have the packages ``Python`` and its standard library installed.
+To use the generator you must have ``Python`` and its standard library installed. You will also need an installation of ``latex`` with the package ``tikz`` (unless you are willing to hack a bit, but more on how to do that later)
 
 ### Minimal Example
 You can call the generator from the command line like this:  
