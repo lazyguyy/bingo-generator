@@ -10,7 +10,7 @@ To use the generator you must have ``Python`` and its standard library installed
 
 ### Minimal Example
 You can call the generator from the command line like this:  
-``>python bingo_generator.py < bingo_values.txt > bingo.tex``
+``$ python bingo_generator.py < bingo_values.txt > bingo.tex``
 
 To generate a Bingo board, the generator expects a list of at least 25 possible values for Bingo fields 
 seperated by ``newline`` characters from the ``stdin``. 
@@ -23,7 +23,7 @@ The generator will then output a valid latex file which compiles to a document c
 Of course, for most of these events, a single Bingo board might not suffice (especially if you want to play with friends).  
 We provide a few command line options for a more customized experience.  
 Consider this example:  
-``>python bingo_generator.py 5 -b board_template.tex -d document_template.tex < bingo_values.txt > bingo.tex``
+``$ python bingo_generator.py 5 -b board_template.tex -d document_template.tex < bingo_values.txt > bingo.tex``
 
 Here we specifiy three options. The first, positional argument is ``n``, the number of boards to be generated.
 
