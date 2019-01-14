@@ -31,7 +31,7 @@ With the optional argument ``-b`` we can specify the name of a file containing a
 
 Finally, we may also change the latex template in which our bingos will be embedded. If we specify a filename with ``-d``, our bingo boards will be embedded in this file.
 
-The files ``board_template.tex`` and ``document_template.tex`` from the repository are embedded in the python code, so you only need to take care of one file.
+The files ``board_template_4_bingos.tex`` and ``document_template.tex`` from the repository are embedded in the python code and used by default (for your convenience).  
 
 ### More Arguments
 You might not be a fan of latex. That is totally fine. And it is not a problem, because we offer the amazing command line option ``-s`` where you can specifiy a file containing a seperator to be used between two bingos (by default it is ``\n\newpage\n``).  
