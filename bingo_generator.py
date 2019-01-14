@@ -44,12 +44,12 @@ board_text = decode_b64_string(b'eJztmk1rwjAYx+/9FAFh6CbDt4Mgwi7CdtnB7WZk1DZ'
                 b'6qgq6CroKugq6CroKugq9yuq+BbFTQVNBU0FTQVNBU0FTSV2zUVSt1d9w1'
                 b'LEJgfpljihA==')
 
-document_text = decode_b64_string(b'eJxVz01rwzAMBuB7fkWg126hOw56GoHt0kPXW12G'
-                b'oii2qT+CrSxzTf77XOgYOerhlXgleo+TJcdoIMYMgTUaWioxRRoBryDpbC'
-                b'FI7fYvaLe1oYH3O7SXLMlb4pBW2cz6eltvn3aXPHjH5HAd/YYw657VWgdw'
-                b'mFQfio5ljpzMA4vg4D3nt0DA1NezZlULph9mzop5jK9NIwtO3TN62xi4JT'
-                b'ml1HTaSf8kyVEA9mEplzoqL+W/5wvcKw5gtUkZbYyLiGQI+c6VcDQbcpJV'
-                b'Fqx0fNSuNh+Hz/Z4+npvj+2mqgS5/v/kLxCMhoA=')
+document_text = decode_b64_string(b'eJxVz01rwzAMBuB7fkWg122hOw56GoXt0kPX21yG'
+                b'Iiu2qT+CrSxzTf77XOgYOerhlXglZMDJkWe0kFKByAYtLY2YEo2AF1D06S'
+                b'Aq43fP6B5aSwPvtujORVFwxDGvsoXN5brePm3PZQieyeM6+g1xNpL1Wgfw'
+                b'mLWMVcc6J872jlWiJpDlNRIwyXY2rFvB9MPMRTOP6aXrVMWpf8LgOgvXrK'
+                b'acu954FR4VeYrAIS71Uk/1pfL3fIVbxQGcsbmgS2kRiSwh37gRnmZLXrEu'
+                b'grVJ99rN5v3wsT+evt72x/2maQR5+X/yFwGUhmk=')
 
 if __name__ == "__main__":
 
