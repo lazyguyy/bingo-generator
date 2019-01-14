@@ -17,7 +17,7 @@ seperated by ``newline`` characters from the ``stdin``.
 The first value is treated as the center value of the Bingo board, 
 all others will be drawn randomly (without repetition) from the remaining list.
 
-The generator will then output a valid latex file which compiles to a document containing a Bingo board on ``stdout``.
+The generator will then output a valid latex file which compiles to a document containing 4 Bingo boards on ``stdout``.  
 
 ### Advanced Example
 Of course, for most of these events, a single Bingo board might not suffice (especially if you want to play with friends).  
@@ -34,7 +34,7 @@ Finally, we may also change the latex template in which our bingos will be embed
 The files ``board_template_4_bingos.tex`` and ``document_template.tex`` from the repository are embedded in the python code and used by default (for your convenience).  
 
 ### More Arguments
-You might not be a fan of latex. That is totally fine. And it is not a problem, because we offer the amazing command line option ``-s`` where you can specifiy a file containing a seperator to be used between two bingos (by default it is ``\n\newpage\n``).  
+You might not be a fan of latex. That is totally fine. And it is not a problem, because we offer the amazing command line option ``-s`` where you can specifiy a file containing a seperator to be used between two ``bingo-templates`` (by default it is ``\n\newpage\n``).  
 If you're more into html (some people say CSS is easier to use), you can modify all templates to produce valid html code instead. Use the placeholder ``#INSERT_HERE#`` to account for the bingo values that are being inserted into your document (Naturally, you can modify the default placeholder with the option ``-p``).  
 
 You can also refer to the built-in help for more information.
