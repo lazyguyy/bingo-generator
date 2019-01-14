@@ -13,33 +13,43 @@ def _assert(cond, message):
 def decode_b64_string(string):
     return zlib.decompress(base64.b64decode(string)).decode("utf-8")
 
-def generate_single_bingo(lines):
-    shuffled = random.sample(lines[1:], 24)
-    return shuffled[:12] + lines[:1] + shuffled[12:]
+def generate_bingos(lines, number):
+    bingos = []
+    for _ in range(number):
+        shuffled = random.sample(lines[1:], 24)
+        bingos.extend(shuffled[:12] + lines[:1] + shuffled[12:])
+    return bingos
 
-def main(board_text, document_text, separator):
+def main(board_text, document_text, separator, count):
     lines = [line.strip() for line in sys.stdin if line.strip()]
 
     _assert(len(lines) >= 25, "Not enough tiles to fill a 5x5 Bingo board!")
 
-    bingos = [board_text.format(*generate_single_bingo(lines))
-              for _ in range(args.count)]
+    number = (len(board_text.split("{{}}")) - 1) // 25
+
+    bingos = [board_text.format(*generate_bingos(lines, number))
+              for _ in range(count)]
     print(document_text.format(separator.join(bingos)))
 
-board_text = decode_b64_string(b'eJyt1kFPgzAUwPG7n+IluwzlsLjdzI4ketlh80YXg+s'
-                b'bvjg60naiI3x3AdFEfHEkPE6FpL+m/YeAesaUTOnp9ZzTzp8sVldQX6p54'
-                b'vzHAUsyb+QqWEJscecTkx4whIwMZacMHJ1xqVJLevs1zxw1xu2ULSQepuq'
-                b'43zv0IXSDAEpV2CT3+O7LycNqE60fn+6jdTSpqrthBNxAu6IMdXstiM0ls'
-                b'cUQ7F/t+6QETv8PNb4CR46uwaGjq3CoSJ1uuzJ9+phIIQaVaMSwEpUYVqT'
-                b'TXLJTHxPpxKASnRhWohPDDurUstomRew85t2HB6azEGYBNDf1Is3MgrR/q'
-                b'fWfcXC58UKycR8TacygEo0ZVqIxww57FxUa/fuP5BOmAtoe')
+board_text = decode_b64_string(b'eJztmk1rwjAYx+/9FAFh6CbDt4Mgwi7CdtnB7WZk1DZ'
+                b'qmI0ljXYz5LuvqZlvi0PwOXh4PEjaPM8vaf6XH6U6oBlTCyZmaq6pmvMs5'
+                b'7GaG9147HSpYl9qex1QwfJomSShiDWdSR7bktZBx3GFWMYs4xtmq5rds2X'
+                b'L6bRYviw6W5PLMLUbMaPmWNMJm3Gh16F0+9yv5KYiJhSThmaR5KmyM5UmZ'
+                b'QXod8KOd/0mCFyfCierRSiNftImioq/gyn+uUl5pFaSmYAUP2rvZOp7wTQ'
+                b'Xa54Z0icjySIVitmC1UnCBU9WCbGr98vTGm/77GZHZcuYhIpU3QHUiRvUy'
+                b'P55deXl9W0wfP94HgwHFWN6lyHIAylXhEG17gFhbUhY5xLYv7TfkwI4/T+'
+                b'o61PwIa9Owwe9OhUfFCQd97gw+ZzCQBLyQCEy8mAhUvJgQXJqQ+Z0CgPJy'
+                b'QOFyMmDhcjJgwXJqQOZ0ykMJCcPFCInDxYiJw/2spy24FiG+ShTLHWKQKq'
+                b'NOmnUiL0oltn5UMHfjWu9oBSYYyW5Q1NBU0FTQVNBU0FTQVNBU7lZU6EU3'
+                b'6qgq6CroKugq6CroKugq9yuq+BbFTQVNBU0FTQVNBU0FTSV2zUVSt1d9w1'
+                b'LEJgfpljihA==')
 
-document_text = decode_b64_string(b'eJx1kD9vAjEMxfd8ikq3VlWPqQvjSa1UMVA2gqrU'
-                b'cY6I/EGJ6RWifPcmiDtxA5v1/Hu2n7n0cLLoCIyIMYlAGgxmxk8RjwIOos'
-                b'etFaHXbrkA+/xkUNGyBbtLPXqLFM4zNpE+XObuTbtLyjtCB3P0V4RBS9oX'
-                b'9QfLgjSeUoRqUMJqc05gY8w8okGgKjPucABvrXAy8T5omdPry4IT/tE475'
-                b'5wXmLUF6xU+/YQ80pFpCv0kBmCONZe3pZMt6OnFHebbi0oWTBk/ln+h03L'
-                b'scwYtVpP1sxY87H66tab7/du3TWMXfvTP/4BEoqlPg==')
+document_text = decode_b64_string(b'eJxVz01rwzAMBuB7fkWg126hOw56GoHt0kPXW12G'
+                b'oii2qT+CrSxzTf77XOgYOerhlXgleo+TJcdoIMYMgTUaWioxRRoBryDpbC'
+                b'FI7fYvaLe1oYH3O7SXLMlb4pBW2cz6eltvn3aXPHjH5HAd/YYw657VWgdw'
+                b'mFQfio5ljpzMA4vg4D3nt0DA1NezZlULph9mzop5jK9NIwtO3TN62xi4JT'
+                b'ml1HTaSf8kyVEA9mEplzoqL+W/5wvcKw5gtUkZbYyLiGQI+c6VcDQbcpJV'
+                b'Fqx0fNSuNh+Hz/Z4+npvj+2mqgS5/v/kLxCMhoA=')
 
 if __name__ == "__main__":
 
@@ -73,4 +83,4 @@ if __name__ == "__main__":
                            .replace("}", "}}") \
                            .replace(args.placeholder, "{}")
 
-    main(board_text, document_text, args.separator)
+    main(board_text, document_text, args.separator, args.count)
