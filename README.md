@@ -32,7 +32,7 @@ With the optional argument ``-b`` we can specify the name of a file containing a
 We may also want to change the template file in which the Bingo boards will be embedded. By specifying a filename with ``-d``, the generated bingo boards will be inserted into the given file.
 
 The creation of the final latex file then goes as follows:
-First, the number of Bingo boards in the board template are determined (each board contains 25 fields, so the number of boards is given by the number of fields divided by 25).
+First, the number of Bingo boards in the board template is determined (each board contains 25 fields, so the number of boards is given by the number of fields divided by 25).
 Then, for each of the Bingo boards, a random selection of values (with the center value being fixed) is generated and injected into the board template.
 This process is repeated ``n`` times and finally all of the filled board templates are joined with a separator (by default ``\n\newpage\n``) and inserted into the document template. The result is then printed to ``stdout``.
 
