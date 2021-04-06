@@ -40,6 +40,6 @@ The files ``board_template_4_bingos.tex`` and ``document_template.tex`` from the
 
 ### More Arguments
 You might not be a fan of latex. That is totally fine and not problematic at all, because we offer the amazing command line option ``-s`` where you can specifiy a file containing a seperator to be used between two ``bingo-templates`` (by default it is ``\n\newpage\n``).  
-If you're more into html (some people say CSS is easier to use), you can modify all templates to produce valid html code instead. Use the placeholder ``#INSERT_HERE#`` to account for the bingo values that are being inserted into your document (Naturally, you can modify the default placeholder with the option ``-p``).  
+If you're more into html (some people say CSS is easier to use), you can modify all templates to produce valid html code instead (see [this](https://github.com/slyphix/bingo) for example). Use the placeholder ``#INSERT_HERE#`` to account for the bingo values that are being inserted into your document (Naturally, you can modify the default placeholder with the option ``-p``).  
 
 You can also refer to the built-in help for more information.
